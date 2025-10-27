@@ -1,607 +1,815 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preload" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Heavy.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Extrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="./assets/fonts/Gilroy-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<script src="https://cdn.js?v=1761583941349delivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js?v=1761583941349"></script>
-		<!-- utils.js потрібен для форматування і автодетекту номера (опціонально, але рекомендовано) -->
-		<script src="https://cdn.js?v=1761583941349delivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js?v=1761583941349"></script>
-		<link rel="stylesheet" href="https://cdn.js?v=1761583941349delivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css?v=1761583941349">
-		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1761583941349"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1761583941349">
-	</head>
-	<body>
-		<div class="wrapper">
-			<header data-fls-header="" class="header">
-				<div class="header__container">
-					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
-				</div>
-			</header>
-			<main class="page page--home">
-				<section class="page__hero hero">
-					<div class="hero__container">
-						<div class="hero__discount">
-							Ваша знижка
-							<svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow">
-								<path d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z" fill="#44bc75"></path>
-								<path d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z" fill="#44bc75"></path>
-							</svg>
-						</div>
-						<h1 class="hero__title">Дізнайтесь вартість Вашого кондиціонера</h1>
-						<h2 class="hero__subtitle">
-							Пройдіть коротке опитування і отримайте знижку 5% на кондиціонер та безкоштовну доставку
-						</h2>
-						<button type="button" class="hero__btn">
-							<svg viewbox="0 0 24 24" width="18">
-								<title>mdi-checkbox-marked-circle-outline</title>
-								<path fill="#fff" d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" stroke-width="0" fill-rule="nonzero"></path>
-							</svg>
-							Пройти опитування
-						</button>
-						<div class="hero__bonus">
-							<h3>Бонуси після проходження тесту</h3>
-							<div class="hero__bonus-row">
-								<div class="hero__bonus-content">
-									<div class="hero__img">
-										<picture>
-											<img alt="Подарунок" src="./assets/img/gift.webp">
-										</picture>
-									</div>
-									<p>Безкоштовна доставка</p>
-								</div>
-								<div class="hero__bonus-ico">
-									<svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"></path>
-									</svg>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="hero__bg">
-						<picture>
-							<source media="(max-width: 600px)" srcset="./assets/img/bg-600.webp" type="image/webp">
-							<img alt="Image" src="./assets/img/bg.webp">
-						</picture>
-					</div>
-				</section>
-				<section class="page__quiz quiz">
-					<form class="quiz__form" action="#" method="post">
-						<div class="quiz__ask ask-1">
-							<div class="quiz__questions">
-								<h3 class="quiz__label">
-									<span class="quiz__ico">
-										<svg viewbox="0 0 24 24" fill="#f83a4b">
-											<title>mdi-file-document-box-check-outline</title>
-											<path d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17" stroke-width="0" fill-rule="nonzero"></path>
-										</svg>
-									</span>
-									Розрахуйте вартість Вашого кондиціонера
-								</h3>
-								<h2 class="quiz__title">Призначення будівлі</h2>
-								<div class="quiz__options">
-									<label class="quiz__var">
-										<input type="radio" name="1" value="Житлова">
-										<span class="quiz__check"></span>
-										<div class="quiz__answer">
-											<div class="quiz__img">
-												<picture>
-													<img alt="01" src="./assets/img/quiz/01/01.webp">
-												</picture>
-											</div>
-											<div class="quiz__desc">Житлова</div>
-										</div>
-									</label>
-									<label class="quiz__var">
-										<input type="radio" name="1" value="Комерційна">
-										<span class="quiz__check"></span>
-										<div class="quiz__answer">
-											<div class="quiz__img">
-												<picture>
-													<img alt="02" src="./assets/img/quiz/01/02.webp">
-												</picture>
-											</div>
-											<div class="quiz__desc">Комерційна</div>
-										</div>
-									</label>
-								</div>
-								<div class="quiz__donebar">
-									Готово:
-									<span>0%</span>
-								</div>
-								<div class="quiz__nav">
-									<div class="quiz__bar"></div>
-									<div class="quiz__elements"></div>
-									<div class="quiz__buttons">
-										<button type="button" class="quiz__prev" disabled>
-											<svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
-												<title>mdi-arrow-left</title>
-												<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
-											</svg>
-										</button>
-										<button type="button" class="quiz__next">
-											Далі
-											<span class="next-arr">
-												<svg viewbox="0 0 24 24" class="">
-													<title>mdi-arrow-right</title>
-													<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
-												</svg>
-											</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="quiz__info">
-								<div data-fls-dynamic=".quiz__elements, 991, 1" class="quiz__discount">
-									Ваша знижка
-									<span>
-										0 %
-										<div class="quiz__arrs">
-											<svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow arrow_animation">
-												<path d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z" fill="#44bc75"></path>
-												<path d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z" fill="#44bc75"></path>
-											</svg>
-										</div>
-									</span>
-								</div>
-								<div data-fls-dynamic=".quiz__questions, 991, 2" class="quiz__manager">
-									<div class="quiz__manager-img">
-										<picture>
-											<img alt="Менеджер" src="./assets/img/manager.webp">
-										</picture>
-									</div>
-									<div class="quiz__manager-info">
-										<span>Марія</span>
-										<br>
-										Менеджер
-									</div>
-								</div>
-								<div data-fls-dynamic=".quiz__questions, 991, 3" class="quiz__text">
-									Допоможемо встановити кондиціонер який ви придбаєте і налаштувати все "під ключ"
-								</div>
-								<div data-fls-dynamic=".quiz__elements, 991, 0" class="hero__bonus quiz__bonus">
-									<div class="hero__bonus-row">
-										<div class="hero__bonus-content">
-											<div class="hero__img">
-												<picture>
-													<img alt="Подарунок" src="./assets/img/gift.webp">
-												</picture>
-											</div>
-											<p class="quiz__bonus-p">Безкоштовна доставка</p>
-										</div>
-										<div class="hero__bonus-ico">
-											<svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="quiz__ask ask-2">
-							<div class="quiz__questions quiz__questions-2">
-								<h3 class="quiz__label">
-									<span class="quiz__ico">
-										<svg viewbox="0 0 24 24" fill="#f83a4b">
-											<path d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17" stroke-width="0" fill-rule="nonzero"></path>
-										</svg>
-									</span>
-									Розрахуйте вартість Вашого кондиціонера
-								</h3>
-								<h2 class="quiz__title">Об'єм</h2>
-								<div class="quiz__options">
-									<label class="quiz__var">
-										<input type="radio" name="2" value="До 300 м кв">
-										<span class="quiz__check"></span>
-										<div class="quiz__answer">
-											<div class="quiz__img">
-												<picture>
-													<img alt="01" src="./assets/img/quiz/02/01.webp">
-												</picture>
-											</div>
-											<div class="quiz__desc">До 300 м кв</div>
-										</div>
-									</label>
-									<label class="quiz__var">
-										<input type="radio" name="2" value="До 500 м кв">
-										<span class="quiz__check"></span>
-										<div class="quiz__answer">
-											<div class="quiz__img">
-												<picture>
-													<img alt="02" src="./assets/img/quiz/02/02.webp">
-												</picture>
-											</div>
-											<div class="quiz__desc">До 500 м кв</div>
-										</div>
-									</label>
-									<label class="quiz__var">
-										<input type="radio" name="2" value="Більше 1000 м кв">
-										<span class="quiz__check"></span>
-										<div class="quiz__answer">
-											<div class="quiz__img">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/quiz/02/03-600.webp" type="image/webp">
-													<img alt="03" src="./assets/img/quiz/02/03.webp">
-												</picture>
-											</div>
-											<div class="quiz__desc">Більше 1000 м кв</div>
-										</div>
-									</label>
-								</div>
-								<div class="quiz__donebar">
-									Готово:
-									<span>33%</span>
-								</div>
-								<div class="quiz__nav">
-									<div class="quiz__bar donebar-2"></div>
-									<div class="quiz__elements quiz__elements-2"></div>
-									<div class="quiz__buttons">
-										<button type="button" class="quiz__prev" disabled>
-											<svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
-												<title>mdi-arrow-left</title>
-												<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
-											</svg>
-										</button>
-										<button type="button" class="quiz__next">
-											Далі
-											<span class="next-arr">
-												<svg viewbox="0 0 24 24" class="">
-													<title>mdi-arrow-right</title>
-													<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
-												</svg>
-											</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="quiz__info">
-								<div data-fls-dynamic=".quiz__elements-2, 991, 1" class="quiz__discount">
-									Ваша знижка
-									<span>
-										1 %
-										<div class="quiz__arrs">
-											<svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow arrow_animation">
-												<path d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z" fill="#44bc75"></path>
-												<path d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z" fill="#44bc75"></path>
-											</svg>
-										</div>
-									</span>
-								</div>
-								<div data-fls-dynamic=".quiz__questions-2, 991, 2" class="quiz__manager">
-									<div class="quiz__manager-img">
-										<picture>
-											<img alt="Менеджер" src="./assets/img/manager.webp">
-										</picture>
-									</div>
-									<div class="quiz__manager-info">
-										<span>Марія</span>
-										<br>
-										Менеджер
-									</div>
-								</div>
-								<div data-fls-dynamic=".quiz__questions-2, 991, 3" class="quiz__text">
-									Чим більша площа тим потужніший потрібен кондиціонер для забезпечення ефективного
-                        кондиціонування та обігріву приміщення. Пересуньте повзунок на потрібне значення, піберемо
-                        оптимальний варіант саме під вашу площу.
-								</div>
-								<div data-fls-dynamic=".quiz__elements-2, 991, 0" class="hero__bonus quiz__bonus">
-									<div class="hero__bonus-row">
-										<div class="hero__bonus-content">
-											<div class="hero__img">
-												<picture>
-													<img alt="Подарунок" src="./assets/img/gift.webp">
-												</picture>
-											</div>
-											<p class="quiz__bonus-p">Безкоштовна доставка</p>
-										</div>
-										<div class="hero__bonus-ico">
-											<svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="quiz__ask ask-3">
-							<div class="quiz__questions quiz__questions-3">
-								<h3 class="quiz__label">
-									<span class="quiz__ico">
-										<svg viewbox="0 0 24 24" fill="#f83a4b">
-											<path d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17" stroke-width="0" fill-rule="nonzero"></path>
-										</svg>
-									</span>
-									Розрахуйте вартість Вашого кондиціонера
-								</h3>
-								<h2 class="quiz__title">Введіть місто будівництва</h2>
-								<div class="quiz__options options-input">
-									<label class="quiz__var">
-										<input autocomplete="off" type="text" name="city" placeholder="Ваше місто" class="quiz__input">
-									</label>
-								</div>
-								<div class="quiz__donebar">
-									Готово:
-									<span>66%</span>
-								</div>
-								<div class="quiz__nav">
-									<div class="quiz__bar donebar-3"></div>
-									<div class="quiz__elements quiz__elements-3"></div>
-									<div class="quiz__buttons">
-										<button type="button" class="quiz__prev" disabled>
-											<svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
-												<title>mdi-arrow-left</title>
-												<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
-											</svg>
-										</button>
-										<button type="button" class="quiz__next">
-											Далі
-											<span class="next-arr">
-												<svg viewbox="0 0 24 24" class="">
-													<title>mdi-arrow-right</title>
-													<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
-												</svg>
-											</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="quiz__info">
-								<div data-fls-dynamic=".quiz__elements-3, 991, 1" class="quiz__discount">
-									Ваша знижка
-									<span>
-										2 %
-										<div class="quiz__arrs">
-											<svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow arrow_animation">
-												<path d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z" fill="#44bc75"></path>
-												<path d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z" fill="#44bc75"></path>
-											</svg>
-										</div>
-									</span>
-								</div>
-								<div data-fls-dynamic=".quiz__questions-3, 991, 2" class="quiz__manager">
-									<div class="quiz__manager-img">
-										<picture>
-											<img alt="Менеджер" src="./assets/img/manager.webp">
-										</picture>
-									</div>
-									<div class="quiz__manager-info">
-										<span>Марія</span>
-										<br>
-										Менеджер
-									</div>
-								</div>
-								<div data-fls-dynamic=".quiz__questions-3, 991, 3" class="quiz__text">
-									Чим більша площа тим потужніший потрібен кондиціонер для забезпечення ефективного
-                        кондиціонування та обігріву приміщення. Пересуньте повзунок на потрібне значення, піберемо
-                        оптимальний варіант саме під вашу площу.
-								</div>
-								<div data-fls-dynamic=".quiz__elements-3, 991, 0" class="hero__bonus quiz__bonus">
-									<div class="hero__bonus-row">
-										<div class="hero__bonus-content">
-											<div class="hero__img">
-												<picture>
-													<img alt="Подарунок" src="./assets/img/gift.webp">
-												</picture>
-											</div>
-											<p class="quiz__bonus-p">Безкоштовна доставка</p>
-										</div>
-										<div class="hero__bonus-ico">
-											<svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="quiz__ask ask-4">
-							<div class="quiz__questions quiz__questions-4">
-								<h3 class="quiz__label">
-									<span class="quiz__ico">
-										<svg viewbox="0 0 24 24" fill="#f83a4b">
-											<path d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17" stroke-width="0" fill-rule="nonzero"></path>
-										</svg>
-									</span>
-									Розрахуйте вартість Вашого кондиціонера
-								</h3>
-								<h2 class="quiz__title">Які необхідні терміни для виконання послуг?</h2>
-								<div class="quiz__options options-deadline">
-									<div class="quiz__vars">
-										<label class="quiz__var quiz__var-row">
-											<input type="radio" name="4" value="Протягом двох днів">
-											<span class="quiz__check quiz__check-row"></span>
-											<div class="quiz__answer">
-												<div class="quiz__desc">Протягом двох днів</div>
-											</div>
-										</label>
-										<label class="quiz__var quiz__var-row">
-											<input type="radio" name="4" value="Протягом тижня">
-											<span class="quiz__check quiz__check-row"></span>
-											<div class="quiz__answer">
-												<div class="quiz__desc">Протягом тижня</div>
-											</div>
-										</label>
-										<label class="quiz__var quiz__var-row">
-											<input type="radio" name="4" value="Протягом місяця">
-											<span class="quiz__check quiz__check-row"></span>
-											<div class="quiz__answer">
-												<div class="quiz__desc">Протягом місяця</div>
-											</div>
-										</label>
-										<label class="quiz__var quiz__var-row">
-											<input type="radio" name="4" value="За домовленістю">
-											<span class="quiz__check quiz__check-row"></span>
-											<div class="quiz__answer">
-												<div class="quiz__desc">За домовленістю</div>
-											</div>
-										</label>
-									</div>
-									<div class="quiz__deadline-img">
-										<picture>
-											<img alt="Кондиціонер" src="./assets/img/deadline.webp">
-										</picture>
-									</div>
-								</div>
-								<div class="quiz__donebar">
-									Готово:
-									<span>99%</span>
-								</div>
-								<div class="quiz__nav">
-									<div class="quiz__bar donebar-4"></div>
-									<div class="quiz__elements quiz__elements-4"></div>
-									<div class="quiz__buttons">
-										<button type="button" class="quiz__prev" disabled>
-											<svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
-												<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
-											</svg>
-										</button>
-										<button type="button" class="quiz__next">
-											Останній крок
-											<span class="next-arr">
-												<svg viewbox="0 0 24 24" class="">
-													<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
-												</svg>
-											</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="quiz__info">
-								<div data-fls-dynamic=".quiz__elements-4, 991, 1" class="quiz__discount">
-									Ваша знижка
-									<span>
-										5 %
-										<div class="quiz__arrs">
-											<svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow arrow_animation">
-												<path d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z" fill="#44bc75"></path>
-												<path d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z" fill="#44bc75"></path>
-											</svg>
-										</div>
-									</span>
-								</div>
-								<div data-fls-dynamic=".quiz__questions-4, 991, 2" class="quiz__manager">
-									<div class="quiz__manager-img">
-										<picture>
-											<img alt="Менеджер" src="./assets/img/manager.webp">
-										</picture>
-									</div>
-									<div class="quiz__manager-info">
-										<span>Марія</span>
-										<br>
-										Менеджер
-									</div>
-								</div>
-								<div data-fls-dynamic=".quiz__questions-4, 991, 3" class="quiz__text">
-									Щоб зробити точний прорахунок нам потрібно знати в який термін ми повинні надати для вас послугу
-								</div>
-								<div data-fls-dynamic=".quiz__elements-4, 991, 0" class="hero__bonus quiz__bonus">
-									<div class="hero__bonus-row">
-										<div class="hero__bonus-content">
-											<div class="hero__img">
-												<picture>
-													<img alt="Подарунок" src="./assets/img/gift.webp">
-												</picture>
-											</div>
-											<p class="quiz__bonus-p">Безкоштовна доставка</p>
-										</div>
-										<div class="hero__bonus-ico">
-											<svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="quiz__ask quiz-final">
-							<div class="quiz-final__info">
-								<h2 class="quiz-final__title">Заповніть форму, щоб дізнатись вартість кондиціонера</h2>
-								<div class="quiz-final__caption">Ми прорахуємо вартість згідно заданих параметрів</div>
-								<div class="quiz-final__text">Ваші бонуси</div>
-								<div class="hero__bonus">
-									<div class="hero__bonus-row">
-										<div class="hero__bonus-content">
-											<div class="hero__img">
-												<picture>
-													<img alt="Подарунок" src="./assets/img/gift.webp">
-												</picture>
-											</div>
-											<p>Безкоштовна доставка</p>
-										</div>
-										<div class="hero__bonus-ico">
-											<svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-								<div class="quiz-final__arrow">
-									<svg data-v-2be8f1c4="" width="128" height="128" viewbox="0 0 64 64">
-										<g data-v-2be8f1c4="">
-											<path data-v-2be8f1c4="" d="m63.386,16.193l.002-.002c0.002-0.003 0.004-0.006 0.006-0.01 0.172-0.195 0.298-0.43 0.399-0.678 0.032-0.076 0.053-0.148 0.076-0.225 0.058-0.191 0.094-0.389 0.106-0.596 0.006-0.076 0.018-0.148 0.016-0.226 0-0.04 0.01-0.076 0.008-0.115-0.014-0.239-0.062-0.47-0.136-0.687-0.006-0.023-0.022-0.041-0.03-0.064-0.088-0.239-0.214-0.451-0.363-0.645-0.021-0.027-0.028-0.063-0.05-0.09l-10.311-12.146c-0.789-0.93-2.084-0.948-2.894-0.037-0.808,0.91-0.823,2.402-0.032,3.334l5.558,6.549c-8.121-1.076-16.104,0.633-16.481,0.717-24.646,4.467-42.087,27.227-38.88,50.736 0.159,1.164 1.028,1.992 2.019,1.992 0.106,0 0.212-0.009 0.32-0.027 1.116-0.203 1.878-1.409 1.704-2.696-2.857-20.94 13.056-41.282 35.537-45.358 0.103-0.024 8.351-1.794 16.117-0.574l-8.577,5.093c-1.005,0.598-1.398,2.02-0.881,3.177 0.516,1.159 1.748,1.608 2.756,1.017l13.52-8.028c0.183-0.111 0.347-0.25 0.491-0.411z"></path>
-										</g>
-									</svg>
-								</div>
-							</div>
-							<div class="quiz-final__form">
-								<div class="hero__discount">
-									Ваша знижка 5%
-									<svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow">
-										<path d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z" fill="#44bc75"></path>
-										<path d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z" fill="#44bc75"></path>
-									</svg>
-								</div>
-								<div class="quiz-final__item">
-									<label for="name">Введіть ім'я</label>
-									<div class="quiz-final__input-wrapper">
-										<span>
-											<svg viewbox="0 0 24 24" class="mdi-icon mdi-36px">
-												<title>mdi-account</title>
-												<path d="M12,4C14.21,4 16,5.79 16,8C16,10.21 14.21,12 12,12C9.79,12 8,10.21 8,8C8,5.79 9.79,4 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" stroke-width="0" fill-rule="nonzero"></path>
-											</svg>
-										</span>
-										<input required id="name" type="text" name="name" placeholder="Ім'я" class="quiz-final__input">
-									</div>
-								</div>
-								<div class="quiz-final__item">
-									<label for="phone">Введіть номер телефону, щоб отримати знижку</label>
-									<input id="phone" class="quiz-final__input" type="tel" placeholder="+38 0XX XXX XXXX" required>
-								</div>
-								<button type="submit" class="quiz-final__btn">
-									<span>
-										<svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
-											<title>mdi-checkbox-marked-circle-outline</title>
-											<path d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" stroke-width="0" fill-rule="nonzero"></path>
-										</svg>
-									</span>
-									Отримати результати
-								</button>
-								<label class="quiz-final__agree">
-									<input required type="checkbox" name="agree">
-									<span class="quiz-final__box" aria-hidden="true"></span>
-									<span class="quiz-final__text">
-										З
-										<a href="#">політикою конфіденційності</a>
-										ознайомлений(а)
-									</span>
-								</label>
-							</div>
-						</div>
-					</form>
-				</section>
-			</main>
-			<footer data-fls-footer="" class="footer">
-				<div class="footer__container"></div>
-			</footer>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Thin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Light.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Heavy.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Extrabold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="./assets/fonts/Gilroy-Black.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
+
+        <title>Home Page</title>
+        <script type="module" crossorigin="" src="./js/index.min.js?v=1761583941349"></script>
+        <link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1761583941349" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header data-fls-header="" class="header">
+                <div class="header__container">
+                    <!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+                </div>
+            </header>
+            <main class="page page--home">
+                <section class="page__hero hero">
+                    <div class="hero__container">
+                        <div class="hero__discount">
+                            Ваша знижка
+                            <svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow">
+                                <path
+                                    d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z"
+                                    fill="#44bc75"
+                                ></path>
+                                <path
+                                    d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z"
+                                    fill="#44bc75"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h1 class="hero__title">Дізнайтесь вартість Вашого кондиціонера</h1>
+                        <h2 class="hero__subtitle">
+                            Пройдіть коротке опитування і отримайте знижку 5% на кондиціонер та безкоштовну доставку
+                        </h2>
+                        <button type="button" class="hero__btn">
+                            <svg viewbox="0 0 24 24" width="18">
+                                <title>mdi-checkbox-marked-circle-outline</title>
+                                <path
+                                    fill="#fff"
+                                    d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                                    stroke-width="0"
+                                    fill-rule="nonzero"
+                                ></path>
+                            </svg>
+                            Пройти опитування
+                        </button>
+                        <div class="hero__bonus">
+                            <h3>Бонуси після проходження тесту</h3>
+                            <div class="hero__bonus-row">
+                                <div class="hero__bonus-content">
+                                    <div class="hero__img">
+                                        <picture>
+                                            <img alt="Подарунок" src="./assets/img/gift.webp" />
+                                        </picture>
+                                    </div>
+                                    <p>Безкоштовна доставка</p>
+                                </div>
+                                <div class="hero__bonus-ico">
+                                    <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__bg">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="./assets/img/bg-600.webp" type="image/webp" />
+                            <img alt="Image" src="./assets/img/bg.webp" />
+                        </picture>
+                    </div>
+                </section>
+                <section class="page__quiz quiz">
+                    <form class="quiz__form" action="#" method="post">
+                        <div class="quiz__ask ask-1">
+                            <div class="quiz__questions">
+                                <h3 class="quiz__label">
+                                    <span class="quiz__ico">
+                                        <svg viewbox="0 0 24 24" fill="#f83a4b">
+                                            <title>mdi-file-document-box-check-outline</title>
+                                            <path
+                                                d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17"
+                                                stroke-width="0"
+                                                fill-rule="nonzero"
+                                            ></path>
+                                        </svg>
+                                    </span>
+                                    Розрахуйте вартість Вашого кондиціонера
+                                </h3>
+                                <h2 class="quiz__title">Призначення будівлі</h2>
+                                <div class="quiz__options">
+                                    <label class="quiz__var">
+                                        <input type="radio" name="1" value="Житлова" />
+                                        <span class="quiz__check"></span>
+                                        <div class="quiz__answer">
+                                            <div class="quiz__img">
+                                                <picture>
+                                                    <img alt="01" src="./assets/img/quiz/01/01.webp" />
+                                                </picture>
+                                            </div>
+                                            <div class="quiz__desc">Житлова</div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz__var">
+                                        <input type="radio" name="1" value="Комерційна" />
+                                        <span class="quiz__check"></span>
+                                        <div class="quiz__answer">
+                                            <div class="quiz__img">
+                                                <picture>
+                                                    <img alt="02" src="./assets/img/quiz/01/02.webp" />
+                                                </picture>
+                                            </div>
+                                            <div class="quiz__desc">Комерційна</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz__donebar">
+                                    Готово:
+                                    <span>0%</span>
+                                </div>
+                                <div class="quiz__nav">
+                                    <div class="quiz__bar"></div>
+                                    <div class="quiz__elements"></div>
+                                    <div class="quiz__buttons">
+                                        <button type="button" class="quiz__prev" disabled>
+                                            <svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
+                                                <title>mdi-arrow-left</title>
+                                                <path
+                                                    d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                                                    stroke-width="0"
+                                                    fill-rule="nonzero"
+                                                ></path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="quiz__next">
+                                            Далі
+                                            <span class="next-arr">
+                                                <svg viewbox="0 0 24 24" class="">
+                                                    <title>mdi-arrow-right</title>
+                                                    <path
+                                                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                                                        stroke-width="0"
+                                                        fill-rule="nonzero"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__info">
+                                <div data-fls-dynamic=".quiz__elements, 991, 1" class="quiz__discount">
+                                    Ваша знижка
+                                    <span>
+                                        0 %
+                                        <div class="quiz__arrs">
+                                            <svg
+                                                width="10"
+                                                height="10"
+                                                viewbox="0 0 10 10"
+                                                fill="none"
+                                                class="arrow arrow_animation"
+                                            >
+                                                <path
+                                                    d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                                <path
+                                                    d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions, 991, 2" class="quiz__manager">
+                                    <div class="quiz__manager-img">
+                                        <picture>
+                                            <img alt="Менеджер" src="./assets/img/manager.webp" />
+                                        </picture>
+                                    </div>
+                                    <div class="quiz__manager-info">
+                                        <span>Марія</span>
+                                        <br />
+                                        Менеджер
+                                    </div>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions, 991, 3" class="quiz__text">
+                                    Допоможемо встановити кондиціонер який ви придбаєте і налаштувати все "під ключ"
+                                </div>
+                                <div data-fls-dynamic=".quiz__elements, 991, 0" class="hero__bonus quiz__bonus">
+                                    <div class="hero__bonus-row">
+                                        <div class="hero__bonus-content">
+                                            <div class="hero__img">
+                                                <picture>
+                                                    <img alt="Подарунок" src="./assets/img/gift.webp" />
+                                                </picture>
+                                            </div>
+                                            <p class="quiz__bonus-p">Безкоштовна доставка</p>
+                                        </div>
+                                        <div class="hero__bonus-ico">
+                                            <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz__ask ask-2">
+                            <div class="quiz__questions quiz__questions-2">
+                                <h3 class="quiz__label">
+                                    <span class="quiz__ico">
+                                        <svg viewbox="0 0 24 24" fill="#f83a4b">
+                                            <path
+                                                d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17"
+                                                stroke-width="0"
+                                                fill-rule="nonzero"
+                                            ></path>
+                                        </svg>
+                                    </span>
+                                    Розрахуйте вартість Вашого кондиціонера
+                                </h3>
+                                <h2 class="quiz__title">Об'єм</h2>
+                                <div class="quiz__options">
+                                    <label class="quiz__var">
+                                        <input type="radio" name="2" value="До 300 м кв" />
+                                        <span class="quiz__check"></span>
+                                        <div class="quiz__answer">
+                                            <div class="quiz__img">
+                                                <picture>
+                                                    <img alt="01" src="./assets/img/quiz/02/01.webp" />
+                                                </picture>
+                                            </div>
+                                            <div class="quiz__desc">До 300 м кв</div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz__var">
+                                        <input type="radio" name="2" value="До 500 м кв" />
+                                        <span class="quiz__check"></span>
+                                        <div class="quiz__answer">
+                                            <div class="quiz__img">
+                                                <picture>
+                                                    <img alt="02" src="./assets/img/quiz/02/02.webp" />
+                                                </picture>
+                                            </div>
+                                            <div class="quiz__desc">До 500 м кв</div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz__var">
+                                        <input type="radio" name="2" value="Більше 1000 м кв" />
+                                        <span class="quiz__check"></span>
+                                        <div class="quiz__answer">
+                                            <div class="quiz__img">
+                                                <picture>
+                                                    <source
+                                                        media="(max-width: 600px)"
+                                                        srcset="./assets/img/quiz/02/03-600.webp"
+                                                        type="image/webp"
+                                                    />
+                                                    <img alt="03" src="./assets/img/quiz/02/03.webp" />
+                                                </picture>
+                                            </div>
+                                            <div class="quiz__desc">Більше 1000 м кв</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz__donebar">
+                                    Готово:
+                                    <span>33%</span>
+                                </div>
+                                <div class="quiz__nav">
+                                    <div class="quiz__bar donebar-2"></div>
+                                    <div class="quiz__elements quiz__elements-2"></div>
+                                    <div class="quiz__buttons">
+                                        <button type="button" class="quiz__prev" disabled>
+                                            <svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
+                                                <title>mdi-arrow-left</title>
+                                                <path
+                                                    d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                                                    stroke-width="0"
+                                                    fill-rule="nonzero"
+                                                ></path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="quiz__next">
+                                            Далі
+                                            <span class="next-arr">
+                                                <svg viewbox="0 0 24 24" class="">
+                                                    <title>mdi-arrow-right</title>
+                                                    <path
+                                                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                                                        stroke-width="0"
+                                                        fill-rule="nonzero"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__info">
+                                <div data-fls-dynamic=".quiz__elements-2, 991, 1" class="quiz__discount">
+                                    Ваша знижка
+                                    <span>
+                                        1 %
+                                        <div class="quiz__arrs">
+                                            <svg
+                                                width="10"
+                                                height="10"
+                                                viewbox="0 0 10 10"
+                                                fill="none"
+                                                class="arrow arrow_animation"
+                                            >
+                                                <path
+                                                    d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                                <path
+                                                    d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions-2, 991, 2" class="quiz__manager">
+                                    <div class="quiz__manager-img">
+                                        <picture>
+                                            <img alt="Менеджер" src="./assets/img/manager.webp" />
+                                        </picture>
+                                    </div>
+                                    <div class="quiz__manager-info">
+                                        <span>Марія</span>
+                                        <br />
+                                        Менеджер
+                                    </div>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions-2, 991, 3" class="quiz__text">
+                                    Чим більша площа тим потужніший потрібен кондиціонер для забезпечення ефективного
+                                    кондиціонування та обігріву приміщення. Пересуньте повзунок на потрібне значення,
+                                    піберемо оптимальний варіант саме під вашу площу.
+                                </div>
+                                <div data-fls-dynamic=".quiz__elements-2, 991, 0" class="hero__bonus quiz__bonus">
+                                    <div class="hero__bonus-row">
+                                        <div class="hero__bonus-content">
+                                            <div class="hero__img">
+                                                <picture>
+                                                    <img alt="Подарунок" src="./assets/img/gift.webp" />
+                                                </picture>
+                                            </div>
+                                            <p class="quiz__bonus-p">Безкоштовна доставка</p>
+                                        </div>
+                                        <div class="hero__bonus-ico">
+                                            <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz__ask ask-3">
+                            <div class="quiz__questions quiz__questions-3">
+                                <h3 class="quiz__label">
+                                    <span class="quiz__ico">
+                                        <svg viewbox="0 0 24 24" fill="#f83a4b">
+                                            <path
+                                                d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17"
+                                                stroke-width="0"
+                                                fill-rule="nonzero"
+                                            ></path>
+                                        </svg>
+                                    </span>
+                                    Розрахуйте вартість Вашого кондиціонера
+                                </h3>
+                                <h2 class="quiz__title">Введіть місто будівництва</h2>
+                                <div class="quiz__options options-input">
+                                    <label class="quiz__var">
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="city"
+                                            placeholder="Ваше місто"
+                                            class="quiz__input"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="quiz__donebar">
+                                    Готово:
+                                    <span>66%</span>
+                                </div>
+                                <div class="quiz__nav">
+                                    <div class="quiz__bar donebar-3"></div>
+                                    <div class="quiz__elements quiz__elements-3"></div>
+                                    <div class="quiz__buttons">
+                                        <button type="button" class="quiz__prev" disabled>
+                                            <svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
+                                                <title>mdi-arrow-left</title>
+                                                <path
+                                                    d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                                                    stroke-width="0"
+                                                    fill-rule="nonzero"
+                                                ></path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="quiz__next">
+                                            Далі
+                                            <span class="next-arr">
+                                                <svg viewbox="0 0 24 24" class="">
+                                                    <title>mdi-arrow-right</title>
+                                                    <path
+                                                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                                                        stroke-width="0"
+                                                        fill-rule="nonzero"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__info">
+                                <div data-fls-dynamic=".quiz__elements-3, 991, 1" class="quiz__discount">
+                                    Ваша знижка
+                                    <span>
+                                        2 %
+                                        <div class="quiz__arrs">
+                                            <svg
+                                                width="10"
+                                                height="10"
+                                                viewbox="0 0 10 10"
+                                                fill="none"
+                                                class="arrow arrow_animation"
+                                            >
+                                                <path
+                                                    d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                                <path
+                                                    d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions-3, 991, 2" class="quiz__manager">
+                                    <div class="quiz__manager-img">
+                                        <picture>
+                                            <img alt="Менеджер" src="./assets/img/manager.webp" />
+                                        </picture>
+                                    </div>
+                                    <div class="quiz__manager-info">
+                                        <span>Марія</span>
+                                        <br />
+                                        Менеджер
+                                    </div>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions-3, 991, 3" class="quiz__text">
+                                    Чим більша площа тим потужніший потрібен кондиціонер для забезпечення ефективного
+                                    кондиціонування та обігріву приміщення. Пересуньте повзунок на потрібне значення,
+                                    піберемо оптимальний варіант саме під вашу площу.
+                                </div>
+                                <div data-fls-dynamic=".quiz__elements-3, 991, 0" class="hero__bonus quiz__bonus">
+                                    <div class="hero__bonus-row">
+                                        <div class="hero__bonus-content">
+                                            <div class="hero__img">
+                                                <picture>
+                                                    <img alt="Подарунок" src="./assets/img/gift.webp" />
+                                                </picture>
+                                            </div>
+                                            <p class="quiz__bonus-p">Безкоштовна доставка</p>
+                                        </div>
+                                        <div class="hero__bonus-ico">
+                                            <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz__ask ask-4">
+                            <div class="quiz__questions quiz__questions-4">
+                                <h3 class="quiz__label">
+                                    <span class="quiz__ico">
+                                        <svg viewbox="0 0 24 24" fill="#f83a4b">
+                                            <path
+                                                d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17"
+                                                stroke-width="0"
+                                                fill-rule="nonzero"
+                                            ></path>
+                                        </svg>
+                                    </span>
+                                    Розрахуйте вартість Вашого кондиціонера
+                                </h3>
+                                <h2 class="quiz__title">Які необхідні терміни для виконання послуг?</h2>
+                                <div class="quiz__options options-deadline">
+                                    <div class="quiz__vars">
+                                        <label class="quiz__var quiz__var-row">
+                                            <input type="radio" name="4" value="Протягом двох днів" />
+                                            <span class="quiz__check quiz__check-row"></span>
+                                            <div class="quiz__answer">
+                                                <div class="quiz__desc">Протягом двох днів</div>
+                                            </div>
+                                        </label>
+                                        <label class="quiz__var quiz__var-row">
+                                            <input type="radio" name="4" value="Протягом тижня" />
+                                            <span class="quiz__check quiz__check-row"></span>
+                                            <div class="quiz__answer">
+                                                <div class="quiz__desc">Протягом тижня</div>
+                                            </div>
+                                        </label>
+                                        <label class="quiz__var quiz__var-row">
+                                            <input type="radio" name="4" value="Протягом місяця" />
+                                            <span class="quiz__check quiz__check-row"></span>
+                                            <div class="quiz__answer">
+                                                <div class="quiz__desc">Протягом місяця</div>
+                                            </div>
+                                        </label>
+                                        <label class="quiz__var quiz__var-row">
+                                            <input type="radio" name="4" value="За домовленістю" />
+                                            <span class="quiz__check quiz__check-row"></span>
+                                            <div class="quiz__answer">
+                                                <div class="quiz__desc">За домовленістю</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="quiz__deadline-img">
+                                        <picture>
+                                            <img alt="Кондиціонер" src="./assets/img/deadline.webp" />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="quiz__donebar">
+                                    Готово:
+                                    <span>99%</span>
+                                </div>
+                                <div class="quiz__nav">
+                                    <div class="quiz__bar donebar-4"></div>
+                                    <div class="quiz__elements quiz__elements-4"></div>
+                                    <div class="quiz__buttons">
+                                        <button type="button" class="quiz__prev" disabled>
+                                            <svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
+                                                <path
+                                                    d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                                                    stroke-width="0"
+                                                    fill-rule="nonzero"
+                                                ></path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="quiz__next">
+                                            Останній крок
+                                            <span class="next-arr">
+                                                <svg viewbox="0 0 24 24" class="">
+                                                    <path
+                                                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                                                        stroke-width="0"
+                                                        fill-rule="nonzero"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__info">
+                                <div data-fls-dynamic=".quiz__elements-4, 991, 1" class="quiz__discount">
+                                    Ваша знижка
+                                    <span>
+                                        5 %
+                                        <div class="quiz__arrs">
+                                            <svg
+                                                width="10"
+                                                height="10"
+                                                viewbox="0 0 10 10"
+                                                fill="none"
+                                                class="arrow arrow_animation"
+                                            >
+                                                <path
+                                                    d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                                <path
+                                                    d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z"
+                                                    fill="#44bc75"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions-4, 991, 2" class="quiz__manager">
+                                    <div class="quiz__manager-img">
+                                        <picture>
+                                            <img alt="Менеджер" src="./assets/img/manager.webp" />
+                                        </picture>
+                                    </div>
+                                    <div class="quiz__manager-info">
+                                        <span>Марія</span>
+                                        <br />
+                                        Менеджер
+                                    </div>
+                                </div>
+                                <div data-fls-dynamic=".quiz__questions-4, 991, 3" class="quiz__text">
+                                    Щоб зробити точний прорахунок нам потрібно знати в який термін ми повинні надати для
+                                    вас послугу
+                                </div>
+                                <div data-fls-dynamic=".quiz__elements-4, 991, 0" class="hero__bonus quiz__bonus">
+                                    <div class="hero__bonus-row">
+                                        <div class="hero__bonus-content">
+                                            <div class="hero__img">
+                                                <picture>
+                                                    <img alt="Подарунок" src="./assets/img/gift.webp" />
+                                                </picture>
+                                            </div>
+                                            <p class="quiz__bonus-p">Безкоштовна доставка</p>
+                                        </div>
+                                        <div class="hero__bonus-ico">
+                                            <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz__ask quiz-final">
+                            <div class="quiz-final__info">
+                                <h2 class="quiz-final__title">Заповніть форму, щоб дізнатись вартість кондиціонера</h2>
+                                <div class="quiz-final__caption">Ми прорахуємо вартість згідно заданих параметрів</div>
+                                <div class="quiz-final__text">Ваші бонуси</div>
+                                <div class="hero__bonus">
+                                    <div class="hero__bonus-row">
+                                        <div class="hero__bonus-content">
+                                            <div class="hero__img">
+                                                <picture>
+                                                    <img alt="Подарунок" src="./assets/img/gift.webp" />
+                                                </picture>
+                                            </div>
+                                            <p>Безкоштовна доставка</p>
+                                        </div>
+                                        <div class="hero__bonus-ico">
+                                            <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.99997 4.53334C3.14142 4.53334 3.27708 4.47715 3.37709 4.37713C3.47711 4.27711 3.5333 4.14145 3.5333 4C3.5333 3.704 3.2933 3.46667 2.99997 3.46667C2.85852 3.46667 2.72287 3.52286 2.62285 3.62288C2.52283 3.7229 2.46664 3.85855 2.46664 4C2.46664 4.14145 2.52283 4.27711 2.62285 4.37713C2.72287 4.47715 2.85852 4.53334 2.99997 4.53334ZM4.59997 2.13334C4.74142 2.13334 4.87708 2.18953 4.97709 2.28955C5.07711 2.38957 5.1333 2.52522 5.1333 2.66667V5.33334C5.1333 5.47479 5.07711 5.61044 4.97709 5.71046C4.87708 5.81048 4.74142 5.86667 4.59997 5.86667H1.39997C1.25852 5.86667 1.12287 5.81048 1.02285 5.71046C0.922828 5.61044 0.866638 5.47479 0.866638 5.33334V2.66667C0.866638 2.37067 1.10664 2.13334 1.39997 2.13334H1.66664V1.6C1.66664 1.24638 1.80711 0.907243 2.05716 0.657194C2.30721 0.407146 2.64635 0.26667 2.99997 0.26667C3.17507 0.26667 3.34845 0.301158 3.51022 0.368164C3.67198 0.43517 3.81897 0.533383 3.94278 0.657194C4.06659 0.781006 4.1648 0.927991 4.23181 1.08976C4.29882 1.25153 4.3333 1.42491 4.3333 1.6V2.13334H4.59997ZM2.99997 0.800004C2.7878 0.800004 2.58431 0.884289 2.43429 1.03432C2.28426 1.18435 2.19997 1.38783 2.19997 1.6V2.13334H3.79997V1.6C3.79997 1.38783 3.71569 1.18435 3.56566 1.03432C3.41563 0.884289 3.21214 0.800004 2.99997 0.800004Z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quiz-final__arrow">
+                                    <svg data-v-2be8f1c4="" width="128" height="128" viewbox="0 0 64 64">
+                                        <g data-v-2be8f1c4="">
+                                            <path
+                                                data-v-2be8f1c4=""
+                                                d="m63.386,16.193l.002-.002c0.002-0.003 0.004-0.006 0.006-0.01 0.172-0.195 0.298-0.43 0.399-0.678 0.032-0.076 0.053-0.148 0.076-0.225 0.058-0.191 0.094-0.389 0.106-0.596 0.006-0.076 0.018-0.148 0.016-0.226 0-0.04 0.01-0.076 0.008-0.115-0.014-0.239-0.062-0.47-0.136-0.687-0.006-0.023-0.022-0.041-0.03-0.064-0.088-0.239-0.214-0.451-0.363-0.645-0.021-0.027-0.028-0.063-0.05-0.09l-10.311-12.146c-0.789-0.93-2.084-0.948-2.894-0.037-0.808,0.91-0.823,2.402-0.032,3.334l5.558,6.549c-8.121-1.076-16.104,0.633-16.481,0.717-24.646,4.467-42.087,27.227-38.88,50.736 0.159,1.164 1.028,1.992 2.019,1.992 0.106,0 0.212-0.009 0.32-0.027 1.116-0.203 1.878-1.409 1.704-2.696-2.857-20.94 13.056-41.282 35.537-45.358 0.103-0.024 8.351-1.794 16.117-0.574l-8.577,5.093c-1.005,0.598-1.398,2.02-0.881,3.177 0.516,1.159 1.748,1.608 2.756,1.017l13.52-8.028c0.183-0.111 0.347-0.25 0.491-0.411z"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="quiz-final__form">
+                                <div class="hero__discount">
+                                    Ваша знижка 5%
+                                    <svg width="10" height="10" viewbox="0 0 10 10" fill="none" class="arrow">
+                                        <path
+                                            d="M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z"
+                                            fill="#44bc75"
+                                        ></path>
+                                        <path
+                                            d="M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z"
+                                            fill="#44bc75"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div class="quiz-final__item">
+                                    <label for="name">Введіть ім'я</label>
+                                    <div class="quiz-final__input-wrapper">
+                                        <span>
+                                            <svg viewbox="0 0 24 24" class="mdi-icon mdi-36px">
+                                                <title>mdi-account</title>
+                                                <path
+                                                    d="M12,4C14.21,4 16,5.79 16,8C16,10.21 14.21,12 12,12C9.79,12 8,10.21 8,8C8,5.79 9.79,4 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
+                                                    stroke-width="0"
+                                                    fill-rule="nonzero"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <input
+                                            required
+                                            id="name"
+                                            type="text"
+                                            name="name"
+                                            placeholder="Ім'я"
+                                            class="quiz-final__input"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="quiz-final__item">
+                                    <label for="phone">Введіть номер телефону, щоб отримати знижку</label>
+                                    <input
+                                        id="phone"
+                                        class="quiz-final__input"
+                                        type="tel"
+                                        placeholder="+38 0XX XXX XXXX"
+                                        required
+                                    />
+                                </div>
+                                <button type="submit" class="quiz-final__btn">
+                                    <span>
+                                        <svg viewbox="0 0 24 24" class="mdi-icon mdi-24px">
+                                            <title>mdi-checkbox-marked-circle-outline</title>
+                                            <path
+                                                d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                                                stroke-width="0"
+                                                fill-rule="nonzero"
+                                            ></path>
+                                        </svg>
+                                    </span>
+                                    Отримати результати
+                                </button>
+                                <label class="quiz-final__agree">
+                                    <input required type="checkbox" name="agree" />
+                                    <span class="quiz-final__box" aria-hidden="true"></span>
+                                    <span class="quiz-final__text">
+                                        З
+                                        <a href="#">політикою конфіденційності</a>
+                                        ознайомлений(а)
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            <footer data-fls-footer="" class="footer">
+                <div class="footer__container"></div>
+            </footer>
+        </div>
+    </body>
 </html>
