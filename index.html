@@ -70,11 +70,6 @@
     </head>
     <body>
         <div class="wrapper">
-            <header data-fls-header="" class="header">
-                <div class="header__container">
-                    <!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
-                </div>
-            </header>
             <main class="page page--home">
                 <section class="page__hero hero">
                     <div class="hero__container">
@@ -91,9 +86,10 @@
                                 ></path>
                             </svg>
                         </div>
-                        <h1 class="hero__title">Дізнайтесь вартість Вашого кондиціонера</h1>
+                        <h1 class="hero__title">Дізнайтесь вартість фасаду вашої будівлі під ключ</h1>
                         <h2 class="hero__subtitle">
-                            Пройдіть коротке опитування і отримайте знижку 5% на кондиціонер та безкоштовну доставку
+                            Пройдіть коротке опитування й отримайте попередній розрахунок вартості, персональну знижку
+                            та безкоштовний виїзд спеціаліста
                         </h2>
                         <button type="button" class="hero__btn">
                             <svg viewbox="0 0 24 24" width="18">
@@ -116,7 +112,11 @@
                                             <img alt="Подарунок" src="./assets/img/gift.webp" />
                                         </picture>
                                     </div>
-                                    <p>Безкоштовна доставка</p>
+                                    <div>
+                                        <p>Безкоштовний виїзд замірника</p>
+                                        <p>Консультація по матеріалах і дизайну</p>
+                                        <p>Попередній розрахунок без зобов’язань</p>
+                                    </div>
                                 </div>
                                 <div class="hero__bonus-ico">
                                     <svg viewbox="0 0 6 6" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -130,8 +130,7 @@
                     </div>
                     <div class="hero__bg">
                         <picture>
-                            <source media="(max-width: 600px)" srcset="./assets/img/bg-600.webp" type="image/webp" />
-                            <img alt="Image" src="./assets/img/bg.webp" />
+                            <img alt="Image" src="./assets/img/bg.jpg" />
                         </picture>
                     </div>
                 </section>
@@ -150,7 +149,7 @@
                                             ></path>
                                         </svg>
                                     </span>
-                                    Розрахуйте вартість Вашого кондиціонера
+                                    Розрахуйте вартість фасаду вашої будівлі під ключ
                                 </h3>
                                 <h2 class="quiz__title">Призначення будівлі</h2>
                                 <div class="quiz__options">
@@ -245,13 +244,13 @@
                                         </picture>
                                     </div>
                                     <div class="quiz__manager-info">
-                                        <span>Марія</span>
+                                        <span>Анна</span>
                                         <br />
                                         Менеджер
                                     </div>
                                 </div>
                                 <div data-fls-dynamic=".quiz__questions, 991, 3" class="quiz__text">
-                                    Допоможемо встановити кондиціонер який ви придбаєте і налаштувати все "під ключ"
+                                    Допоможемо підібрати краще рішення для вас "під ключ"
                                 </div>
                                 <div data-fls-dynamic=".quiz__elements, 991, 0" class="hero__bonus quiz__bonus">
                                     <div class="hero__bonus-row">
@@ -286,7 +285,7 @@
                                             ></path>
                                         </svg>
                                     </span>
-                                    Розрахуйте вартість Вашого кондиціонера
+                                    Розрахуйте вартість фасаду вашої будівлі під ключ
                                 </h3>
                                 <h2 class="quiz__title">Об'єм</h2>
                                 <div class="quiz__options">
@@ -398,15 +397,16 @@
                                         </picture>
                                     </div>
                                     <div class="quiz__manager-info">
-                                        <span>Марія</span>
+                                        <span>Анна</span>
                                         <br />
                                         Менеджер
                                     </div>
                                 </div>
                                 <div data-fls-dynamic=".quiz__questions-2, 991, 3" class="quiz__text">
-                                    Чим більша площа тим потужніший потрібен кондиціонер для забезпечення ефективного
-                                    кондиціонування та обігріву приміщення. Пересуньте повзунок на потрібне значення,
-                                    піберемо оптимальний варіант саме під вашу площу.
+                                    Чим більша площа будівлі, тим важливіше правильно підібрати матеріали фасаду, щоб
+                                    забезпечити надійність, енергоефективність і привабний зовнішній вигляд. Пересуньте
+                                    повзунок на потрібну площу — і ми підберемо оптимальне фасадне рішення саме під ваш
+                                    об’єкт.
                                 </div>
                                 <div data-fls-dynamic=".quiz__elements-2, 991, 0" class="hero__bonus quiz__bonus">
                                     <div class="hero__bonus-row">
@@ -441,7 +441,7 @@
                                             ></path>
                                         </svg>
                                     </span>
-                                    Розрахуйте вартість Вашого кондиціонера
+                                    Розрахуйте вартість фасаду вашої будівлі під ключ
                                 </h3>
                                 <h2 class="quiz__title">Введіть місто будівництва</h2>
                                 <div class="quiz__options options-input">
@@ -521,15 +521,15 @@
                                         </picture>
                                     </div>
                                     <div class="quiz__manager-info">
-                                        <span>Марія</span>
+                                        <span>Анна</span>
                                         <br />
                                         Менеджер
                                     </div>
                                 </div>
                                 <div data-fls-dynamic=".quiz__questions-3, 991, 3" class="quiz__text">
-                                    Чим більша площа тим потужніший потрібен кондиціонер для забезпечення ефективного
-                                    кондиціонування та обігріву приміщення. Пересуньте повзунок на потрібне значення,
-                                    піберемо оптимальний варіант саме під вашу площу.
+                                    Вартість доставки та монтажу фасаду залежить від вашого регіону. Ця інформація
+                                    допоможе нам одразу розрахувати точну ціну та підібрати найближчу команду
+                                    спеціалістів.
                                 </div>
                                 <div data-fls-dynamic=".quiz__elements-3, 991, 0" class="hero__bonus quiz__bonus">
                                     <div class="hero__bonus-row">
@@ -564,7 +564,7 @@
                                             ></path>
                                         </svg>
                                     </span>
-                                    Розрахуйте вартість Вашого кондиціонера
+                                    Розрахуйте вартість фасаду вашої будівлі під ключ
                                 </h3>
                                 <h2 class="quiz__title">Які необхідні терміни для виконання послуг?</h2>
                                 <div class="quiz__options options-deadline">
@@ -668,7 +668,7 @@
                                         </picture>
                                     </div>
                                     <div class="quiz__manager-info">
-                                        <span>Марія</span>
+                                        <span>Анна</span>
                                         <br />
                                         Менеджер
                                     </div>
@@ -700,7 +700,9 @@
                         </div>
                         <div class="quiz__ask quiz-final">
                             <div class="quiz-final__info">
-                                <h2 class="quiz-final__title">Заповніть форму, щоб дізнатись вартість кондиціонера</h2>
+                                <h2 class="quiz-final__title">
+                                    Заповніть форму, щоб дізнатись вартість фасаду вашої будівл
+                                </h2>
                                 <div class="quiz-final__caption">Ми прорахуємо вартість згідно заданих параметрів</div>
                                 <div class="quiz-final__text">Ваші бонуси</div>
                                 <div class="hero__bonus">
